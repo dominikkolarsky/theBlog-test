@@ -25,9 +25,12 @@ const overlay = document.querySelector('.overlay');
 const menu = document.querySelector('#menu');
 const links = document.querySelectorAll('.menuLink');
 
+const body = document.querySelector('body')
+
 function handleOpenClose() {
   overlay.classList.toggle('hidden');
   menu.classList.toggle('nav--menu_active');
+  body.classList.toggle('stopScroll')
 }
 
 overlay.addEventListener('click', handleOpenClose);
